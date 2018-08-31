@@ -7,17 +7,9 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -25,6 +17,9 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>Joya Nafa Ulya</Text>
         <Text style={styles.instructions}>23</Text>
         <Text style={styles.instructions}>XI RPL 2</Text>
+        <Image style={styles.gambar}
+        source={require('./content/image/nafa.jpg')}/>
+
       </View>
     );
   }
@@ -47,4 +42,8 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  gambar:{
+  	width: 300,
+  	height: 300,
+  }
 });
